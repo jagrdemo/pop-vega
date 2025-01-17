@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sl-SI">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vega</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+<body>
+  <h1>Risanje grafov s knjižnico Vega</h1>
+
+  <p>
+    <a href="https://vega.github.io/vega/">Vega</a> je knjižnica za risanje grafov,
+    ki jih definiramo v obliki JSON objekta.
+    Specifikacija grafov je relativno podrobna in za začetek si je včasih dobro izbrati
+    konkreten <a href="https://vega.github.io/vega/tutorials/bar-chart/">zgled</a>.
+    Podrobneje so nastavitve grafov opisane v
+    <a href="https://vega.github.io/vega/docs/">dokumentaciji</a>.
+  </p>
+
+  <h2>Vključitev z JSON objektom</h2>
+
+  <p>
+    Grafe lahko v HTML dokument vključimo s pomočjo interaktivnega
+    <a href="https://vega.github.io/vega/usage/#embed">Vega Embed modula</a>.
+  </p>
+
+  <div id="view"></div>
+
+  <script>
+    vegaEmbed(
+      '#view',
+      'vega_barchart.json'
+    );
+  </script>
+
+  <h2>Vključitev v obliki slike</h2>
+
+  <p>
+    Za ustvarjanje in izvoz grafa kot slike lahko uporabimo
+    <a href="https://vega.github.io/editor/#/custom/vega">spletni urejevalnik</a>.
+  </p>
+
+  <p>
+    Ponavadi uporabljamo vektorski format slike, na primer <code>svg</code>.
+  </p>
+  <img src="visualization.svg">
+  <p>
+    Pri rasterskih formatih, na primer <code>png</code>, pri povečavi opazimo, da je
+    slika predstavljena kot mreža pikslov.
+  </p>
+  <img src="visualization.png">
+</body>
+
+</html>
